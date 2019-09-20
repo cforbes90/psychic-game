@@ -74,16 +74,16 @@
                 var isWin = (userGuess == computerGuess);
                 if (isWin || guessLeft == 0) {
                     reset(isWin);
-                }
-            guessLeftText.textContent = "Guesses Left: " + guessLeft;
-             }
+                    }
+                guessLeftText.textContent = "Guesses Left: " + guessLeft;
+            }
             else { 
                 (directionsText.textContent = "You gotta press a letter key!"); 
                 alert("Choose Letters only!");
             }
     
         }
-            ;
+            
     </script>
  
 </body>
