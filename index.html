@@ -66,23 +66,26 @@
 
         document.onkeyup = function (event) {
             var userGuess = event.key;
-            directionsText.textContent = "Keep Going!";
-            guessLeft--;
-            guessesText.append(" " + userGuess);
+            if (computerChoices.includes(userGuess)){
+                directionsText.textContent = "Keep Going!";
+                guessLeft--;
+                guessesText.append(" " + userGuess);
 
-            var isWin = (userGuess == computerGuess);
-            if (isWin || guessLeft == 0) {
-                reset(isWin);
-            }
-            //guessesText.textContent = " ";
-
+                var isWin = (userGuess == computerGuess);
+                if (isWin || guessLeft == 0) {
+                    reset(isWin);
+                }
             guessLeftText.textContent = "Guesses Left: " + guessLeft;
-
-
+             }
+            else { 
+                (directionsText.textContent = "You gotta press a letter key!"); 
+                alert("Choose Letters only!");
+            }
+    
         }
             ;
     </script>
-
+ 
 </body>
 
 </html>
